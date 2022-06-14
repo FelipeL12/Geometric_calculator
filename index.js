@@ -193,8 +193,8 @@ function calcularTrapecio() {
     const lado3 = document.getElementById("inputLado3Trapecio");
     const lado4 = document.getElementById("inputLado4Trapecio");
     const altura = document.getElementById("inputAlturaTrapecio");
-    const baseMayor = document.getElementById("inputBaseMayorTreapecio");
-    const baseMenor = document.getElementById("inputBaseMenorTreapecio");
+    const baseMayor = document.getElementById("inputBaseMayorTrapecio");
+    const baseMenor = document.getElementById("inputBaseMenorTrapecio");
     const lado1Value = parseInt(lado1.value);
     const lado2Value = parseInt(lado2.value);
     const lado3Value = parseInt(lado3.value);
@@ -206,8 +206,8 @@ function calcularTrapecio() {
     const area = areaTrapecio(alturaValue, baseMayorValue, baseMenorValue);
     resultadoPerimetro = document.getElementById("resultadoPerimetro");
     resultadoArea = document.getElementById("resultadoArea");
-    resultadoPerimetro = perimetro + "cm";
-    resultadoArea = area + "cm²";
+    resultadoPerimetro.innerHTML = perimetro + "cm";
+    resultadoArea.innerHTML = area + "cm²";
 }
 
 // CODIGO DE UN PENTAGONO 
@@ -227,11 +227,11 @@ function calcularPentagono() {
 // CODIGO  DE UN HEXAGONO 
 function calcularHexagono() {
     const base = document.getElementById("inputBaseHexagono");
-    const altura = document.getElementById("inputAlturaHexagono");
+    const apotema = document.getElementById("inputApotemaHexagono");
     const baseValue = parseInt(base.value);
-    const alturaValue = parseInt(altura.value);
+    const apotemaValue = parseInt(apotema.value);
     const perimetro = perimetroHexagono(baseValue);
-    const area = areaHexagono(baseValue, alturaValue);
+    const area = areaHexagono(baseValue, apotemaValue);
     resultadoPerimetro = document.getElementById("resultadoPerimetro");
     resultadoArea = document.getElementById("resultadoArea");
     resultadoPerimetro.innerHTML = perimetro + "cm";
