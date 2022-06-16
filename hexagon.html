@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="assets/images/geometry.png">
+    <title>Geometric Calculator</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="calculator_logo-container">
+            <img src="assets/images/geometry3.png" alt="Geometric calculator logo">
+            <h1>Geometric Calculator</h1>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main_container">
+
+        <div class="calculator_container">
+
+            <!-- FIGURES SELECTION -->
+            <section class="figures_container">
+                <div class="square_figure ">
+                    <a href="index.html">
+                        <div class="figure_background">
+                            <img src="assets/images/square_black.png" alt="square">
+                        </div>
+                    </a>
+                </div>
+                <div class="circle_figure ">
+                    <a href="circle.html">
+                        <div class="figure_background">
+                            <img src="assets/images/circle_black.png" alt="circle">
+                        </div>
+                    </a>
+                </div>
+                <div class="triangle_figure ">
+                    <a href="triangle.html">
+                        <div class="figure_background">
+                            <img src="assets/images/triangle_black.png" alt="triangle">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="rectangle_figure ">
+                    <a href="rectangle.html">
+                        <div class="figure_background">
+                            <img src="assets/images/rectangle_black.png" alt=" rectangle">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="rhombus_figure ">
+                    <a href="rhombus.html">
+                        <div class="figure_background">
+                            <img src="assets/images/rhombus_black.png" alt=" rhombus">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="rhomboid_figure ">
+                    <a href="rhomboid.html">
+                        <div class="figure_background">
+                            <img src="assets/images/rhomboid_black.png" alt=" rhomboid">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="trapeze_figure ">
+                    <a href="trapeze.html">
+                        <div class="figure_background">
+                            <img src="assets/images/trapeze_black.png" alt=" trapeze">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pentagon_figure ">
+                    <a href="pentagon.html">
+                        <div class="figure_background">
+                            <img src="assets/images/pentagon_black.png" alt=" pentagon">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hexagon_figure ">
+                    <a href="hexagon.html">
+                        <div class="figure_background">
+                            <img src="assets/images/hexagon_white.png" alt=" hexagon">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="ellipse_figure ">
+                    <a href="ellipse.html">
+                        <div class="figure_background">
+                            <img src="assets/images/ellipse_black.png" alt=" ellipse">
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- USER VALUES -->
+            <div class="user_values_result_grid">
+                <section class="user_values_container">
+                    <form class="values_form rectangle_grid" action="">
+                        <div class="values_form_info-rectangle">
+                            <h2>¡Vamos a calcular un hexagono!</h2>
+                            <p>Ingresa la medida de los lados del cuadrado y
+                                presiona el boton "Calcular"</p>
+                        </div>
+                        <div class="figure_value">
+                            <label for="">Base</label>
+                            <div class="units">
+                                <input type="number" name="baseHexagono" id="inputBaseHexagono">
+                                <span>cm</span>
+                            </div>
+                        </div>
+
+                        <div class="figure_value">
+                            <label for="">Apotema</label>
+                            <div class="units">
+                                <input type="number" name="ApotemaHexagono" id="inputApotemaHexagono">
+                                <span>cm</span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-result" onclick="calcularHexagono()">Calcular</button>
+                    </form>
+                </section>
+
+                <!-- RESULTS -->
+                <section class="results_container">
+                    <div class="result">
+                        <p>El perimetro de la figura es:</p>
+                        <p id="resultadoPerimetro"></p>
+                    </div>
+                    <div class="result">
+                        <p>El area de la figura es:</p>
+                        <p id="resultadoArea"></p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- HOW DO IT -->
+            <section class="how_do_it_container">
+                <div class="how_do_it_info">
+                    <h2>
+                        ¿Como lo hago yo mismo?
+                    </h2>
+                    <div class="how_do_it_img">
+                        <img src="assets/images/hexagon_equation.png" alt="hexagon equation">
+                    </div>
+                    <p>Donde: <br> P es el perimetro <br> A es el area
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="fl_logo">
+            <a href="https://felipel12.github.io/My_portfolio/#"><img src="assets/icons/fl_logo_black.png"
+                    alt="fl Code logo"></a>
+        </div>
+
+        <div class="footer_social_media">
+            <div>
+                <a href="https://github.com/FelipeL12"><img src="assets/icons/github-logo-black.png" alt="Git Hub"></a>
+            </div>
+            <div>
+                <a href="https://www.linkedin.com/in/felipe-lozada-a50969206/"><img
+                        src="assets/icons/linkedin-logo-black.png" alt="Linkedin"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
